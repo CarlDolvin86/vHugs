@@ -1,0 +1,21 @@
+li{
+    padding:10px;
+}
+
+*{
+    font-size: 22px;
+}
+
+.navbar-nav {
+    text-shadow: 1px 1px 5px white;
+    
+}
+
+.navbar-brand {
+    text-shadow: 1px 1px 5px white;
+}
+
+img{
+    max-width: 20px;
+    max-height: 20px;
+}

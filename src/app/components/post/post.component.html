@@ -1,0 +1,70 @@
+<html>
+    <!--  -->
+       
+       <div class="row">
+           <!-- <div class="col-sm">
+               aaaa
+           </div> -->
+           <div class="column left">
+            <div class="container">
+            <div class="keywords">
+              
+               <span><h1 class="card-title"><strong>vHug Words</strong></h1></span>
+               <p *ngFor="let keyword of keywordsArr"><a routerLink="/{{keyword.link}}">{{keyword.word.toUpperCase()}}</a></p>
+           </div>
+            </div>
+            </div>
+           <div class="column middle">
+           <div class="container">
+           <div *ngFor="let post of posts" style="margin: 10px 0px 10px 0px">
+               <!-- class="col-md-4 col-sm-12" -->
+               <div class="card cardMike" >
+                   <!-- style="width: 400rem" -->
+                   <div class="card-body">
+                   <h1 class="card-title" style="font-size: 20px;"><strong>{{post.subject}}</strong></h1>
+                   
+                   <p class="card-text">{{post.body}}</p>
+                   
+                   <a class="card-link" (click)="goToSinglePost(post.id)" style="color: navy;">View Post</a>
+                   <a class="card-link" (click)="addHug(post.id)" style="color: navy;"><input type="image" src="assets/hug-emoji.png" alt="Hugs" >{{" x " +post.hugs}}</a>
+               
+               </div>
+               </div>
+               
+           </div>
+           
+       </div>    
+       <p class="credit">Artwork credit: 9sekunden uploaded hug emoji to <a href="https://www.clipartkey.com/view/iRxxbo_hug-clipart-hug-emoji-hug-smiley/" target="_blank">clipartkey</a></p>  
+       </div>
+           <!-- <div class="col-sm">
+               
+           </div> -->
+           <div class="column right">
+           <div class="container">
+            <div class="download-resources">
+               <span><h1 class="card-title"><strong>Suggested Resources</strong></h1></span>
+               
+                       <select class="form-select" multiple aria-label="multiple select example" onchange="location = this.value" >
+                           <option *ngFor="let file of uploadArr" value="{{ file.url }}" ><a  href="{{ file.url }}">{{ file.name }}</a></option>
+                           
+                       </select>  
+           </div>
+
+           <div class="hashtags">
+            <span><h1 class="card-title"><strong>Hashtags</strong></h1></span>
+            
+            <select class="form-select" multiple aria-label="multiple select example" (change)="gotoHashtagPosts($event)">
+                <option *ngFor="let tag of myHashtags" value="{{tag.id}}">{{ tag.hashtag }}</option> 
+                        
+                    </select>
+            </div>
+           </div>
+           </div>
+       </div>
+       
+   <!-- </div> -->
+   
+   
+   
+   
+   </html>

@@ -1,0 +1,20 @@
+
+<html>
+    <h1>{{displayTag}}</h1>
+    <div class="container" *ngFor="let post of posts">
+        
+    
+<div class="card cardMike" >
+    <!-- style="width: 400rem" -->
+    <div class="card-body">
+    <h1 class="card-title" style="font-size: 20px;"><strong>{{post.subject}}</strong></h1>
+    
+    <p class="card-text">{{post.body}}</p>
+    <span>Replies:</span>
+    <p *ngFor="let replies of post.replies">{{replies.message}}</p>
+    <!-- <a class="card-link" (click)="goToSinglePost(post.id)" style="color: navy;">View Post</a> -->
+   
+</div>
+</div>
+</div>
+</html>

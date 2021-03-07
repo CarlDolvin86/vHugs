@@ -1,0 +1,36 @@
+
+<body>
+  <div class="imageClass">
+  <div class="banner-image" rel="banner-image"></div>
+  <div class="slide"><p class="content">
+    Have you ever needed a hug or advice, but NOT the recognition? Maybe you’re embarrassed to ask for help 
+    or worried about seeking resources or simply want to be in your feelings without explanation.
+    Try vHugs! Post anonymously and receive the support of your community or chat in real time.
+    Share resources or show you care with a simple virtual hug (vHug).
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col-4">
+    </div>
+     <div class="col-4">
+       <div class="card" style="width: 18rem;">
+         <div class="card-body">
+           <h5 class="card-title">Login to vHugs</h5>
+           <input type="text" name="username" [(ngModel)]="username" placeholder="Username">
+           <button type="button" class="btn btn-primary" (click)="handleLogin()" style="background-color:#003399">Login</button>
+           <br>
+           <button (click)="loginWithRedirect()">Authorized Login</button>
+         </div>
+       </div>
+       
+    </div>
+    
+    <div class="col-4">
+    </div>
+            </div>
+        </div>
+        <div class="emptySpace"></div>
+          </body>

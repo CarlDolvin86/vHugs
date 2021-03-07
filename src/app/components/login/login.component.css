@@ -1,0 +1,58 @@
+button{
+    margin-top: 5px;
+}
+
+body {
+  margin: 0;
+  background-color: #C2B6AC;
+}
+.card{
+    text-align: center;
+    margin-top: 15px;
+    border-style: solid;
+    height:20vh;
+}
+
+.emptySpace{
+    height:17vh;
+    background-color: #C2B6AC;
+}
+.imageClass{
+    height:50vh;
+    width: 100vw;
+    background-position: left;
+}
+.banner-image {
+  background-image: url("/assets/slide-banner.jpg");
+ /* height:50vh;
+ width: 100vw; */
+ height:100%;
+ width: 100%;
+ object-fit: contain;
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+  background-position: left;
+  
+ 
+}
+.slide{
+  display:none;
+ width: 2000px;
+}
+.banner-image:hover + .slide {
+  display: block;
+}
+.content {
+    position: absolute;
+    background-color: rgba(0,0,0,.4);
+    top:0;
+    left:0;
+    height:58vh;
+    color: rgb(233, 224, 224);
+    font-size: 18pt;
+    padding:11vh;
+    box-sizing:border-box;
+    width: 100%;
+   
+     margin: 0;
+}

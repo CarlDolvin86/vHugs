@@ -1,0 +1,7 @@
+
+<app-startheader *ngIf="this.loginService.notLoggedIn"></app-startheader>
+<app-header *ngIf="this.loginService.isUserLoggedIn"></app-header>
+<app-authheader *ngIf="this.loginService.userAuthLoggedIn"></app-authheader>
+<router-outlet ></router-outlet>
+<app-footer></app-footer>
+

@@ -1,0 +1,45 @@
+<html>
+ 
+<div class="container">
+  
+    <div class="row">
+      <div class="col-md">
+      
+      </div>
+      <div class="col-md">
+          
+         <div class="card">
+          <h1 class="card-title" style="font-size: 20px;"><strong>New Post</strong></h1>
+                
+        <div class="mb-4">
+          <label for="exampleFormControlInput1" class="form-label"></label>
+          <input style="max-width: 280px;" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Subject" [(ngModel)]="subject">
+        </div>
+        <div class="mb-4">
+          <label for="exampleFormControlTextarea1" class="form-label"></label>
+          <textarea style="width: 600px;" class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="body" placeholder="Post"></textarea>
+        </div>
+        <span>Characters Left: {{totalChars-body.length}}</span>
+        <p *ngIf="shouldDisplayHashtag">{{displayedHashtag}}</p>
+        <button type="submit"(click)="addPost()" style="background-color:#003399; color:white">Add Post</button>
+        <div id="menu">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Hashtags
+         </button> 
+         <ul>
+             <li *ngFor="let tag of myHashtags"><a (click)="addTagToPost(tag.id,tag.hashtag)">{{tag.hashtag}}</a></li>
+         </ul>
+      </div>
+      </div>
+    </div>
+      
+          
+        
+    
+      <div class="col-md">
+
+      </div>
+    </div>
+  </div>
+  
+  </html>

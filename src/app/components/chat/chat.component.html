@@ -1,0 +1,38 @@
+
+<body>
+
+    <div class="page-content page-container" id="page-content">
+        <div class="padding">
+            <div class="row container d-flex justify-content-center">
+                <div class="col-md-6">
+                    <div class="card card-bordered">
+                        <div class="card-header">
+                            <h4 class="card-title" style="text-align: center;text-shadow: 2px 2px 5px #003399;">vHugs Chat</h4>
+                        </div>
+                        <div class="ps-container ps-theme-default ps-active-y" id="chat-content" style="overflow-y: scroll !important; height:400px !important;" >
+                            <div class="media media-chat" *ngFor="let chat of chatArr async">
+                                <div class="media-body">
+                                   <span><strong style="text-shadow: 2px 2px 5px #003399">{{chat.username}}: </strong></span> <span class="messages">{{chat.message}}</span>
+                                   
+                                  
+                                </div>
+                                
+                            </div>
+                                </div>
+                            </div>
+                            <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+                                <div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                            </div>
+                            <div class="ps-scrollbar-y-rail" style="top: 0px; height: 0px; right: 2px;">
+                                <div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 2px;"></div>
+                            </div>
+                            <input style="max-width: 280px;" type="text" class="form-control" id="exampleFormControlInput1" placeholder="message" [(ngModel)]="message">
+                            <button type="submit"(click)="addChat()" style="background-color:#003399; color:white">Send</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+    
+    </body>
+

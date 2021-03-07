@@ -1,0 +1,32 @@
+html {
+    background-color:  #CCFFFF;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: repeat;
+    object-position: 100%;
+}
+.card-reader {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px;
+    margin: 10px 10px;
+    border-style: ridge;
+    border-color:navy;
+    border-radius: 20px;
+    border-width: 3px;
+    background-color: white;
+    max-width: 500px;
+}
+.list-group-flush>.list-group-item {
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.x {
+    margin-left: 10px;
+}
+.fileUploadContainer{
+    display: flex;
+}

@@ -1,0 +1,33 @@
+<html>
+    <div class="container">
+    <div class="card">
+    <h1><strong>{{singlePostData.subject}}</strong></h1>
+    <h3>{{singlePostData.body}}</h3> 
+
+    <span><img src="assets/hug-emoji.png" alt="Hugs">{{" x " +singlePostData.hugs}}</span>
+    <p *ngFor="let tag of hashtag">{{tag.hashtag}}</p>
+    <br>
+    <div class="replies">
+    <span>Replies:</span>
+    </div>
+        <div *ngFor="let reply of replies">
+            
+            <p><em>{{reply.message}}</em></p>
+    </div>        
+       
+
+    
+        
+    <div>
+        
+        <p><input type="text" name="reply" placeholder="Enter Reply" [(ngModel)]="replyText"></p>
+        <button type="submit" (click)="addReply()">Add Reply</button>
+    </div>
+    </div>
+    </div>
+    
+
+</html>
+
+    
+
